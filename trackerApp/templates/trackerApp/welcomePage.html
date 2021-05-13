@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<form method="post">
+  {% csrf_token %}
+  <html>
+  <head>
+    {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+  </head>
+    <body>
+      <div class = "navbar">
+        <p class = "page-title" style = "font-family: 'Noto Sans', sans-serif;"> STAT-TRACKER.COM </p>
+        <p class = "page-subtitle" style = "font-family: 'Noto Sans', sans-serif;"> CHOSE A GAME BELOW TO BEGIN </p>
+        <div class = "siege-button" (% url 'homePage' %)>
+        <div class = "valorant-button">
+        <div class = "fortnite-button">
+        </div>
+        </div>
+        </div>
+        <p class = "valorant-subtitle" style = "font-family: 'Noto Sans', sans-serif;"> VALORANT </p>
+        <p class = "siege-subtitle" style = "font-family: 'Noto Sans', sans-serif;"> R6:SIEGE </p>
+        <p class = "fortnite-subtitle" style = "font-family: 'Noto Sans', sans-serif;"> FORTNITE </p>
+      </div>
+
+
+    </body>
+  </html>
+</form>

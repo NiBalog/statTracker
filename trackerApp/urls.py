@@ -4,5 +4,6 @@ from . import views
 
 app_name = 'trackerApp'
 urlpatterns = [
-    path('', views.ProfileView.as_view(), name='index')
+    path('', views.WelcomeView.as_view(), name='welcomePage');
+    path('',views.HomePageView.as_view(), name = 'homePage');
 ]

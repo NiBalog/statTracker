@@ -1,1 +1,21 @@
+body {
+  margin:0;
+  padding:0;
+}
+.navbar {width:100%; height:950px; background-color:#1E96B1; border-style:solid; border-bottom: solid #1E96B1 3px;}
 
+.page-title {margin-top:150px; text-align:center; color:white; font-size: 60px;}
+
+.page-subtitle {margin-top:-50px; text-align:center; color:white; font-size: 15px;}
+
+.siege-button{margin-top: 75px; margin-left: 9.5vw; width:24vw; height:275px; background-color:red; border-style:solid; position: fixed; border-color:#222222; border-width:4px; border-radius:15px; background-image: url("valorant-button-image.jpg");background-size: 475px 300px;   background-repeat: no-repeat;}
+
+.valorant-button{margin-top: -2px; margin-left: 28vw; width:24vw; height:275px; background-color:green; border-style:solid; position: fixed; border-radius:15px; background-image: url("siege-button-image.jpeg");background-size: 475px 300px;   background-repeat: no-repeat;}
+
+.fortnite-button{margin-top: -3px; margin-left: 28vw; width:24vw; height:275px; background-color:blue; border-style:solid; position: fixed; border-radius:15px; background-image: url("fortnite-button-image.jpg");background-size: 475px 300px;   background-repeat: no-repeat;}
+
+.valorant-subtitle{ margin-left:16%; margin-top: 380px; color:white; font-size: 40px;}
+
+.siege-subtitle{ margin-left:45.5%; margin-top: -94px; color:white; font-size: 40px;}
+
+.fortnite-subtitle{ margin-left:73.5%; margin-top: -96px; color:white; font-size: 40px;}

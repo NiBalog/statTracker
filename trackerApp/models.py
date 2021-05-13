@@ -11,17 +11,8 @@ class Profile(models.Model):
     def __str__(self):
         return self.userNameText
 
-class gameStats(models.Model):
-    Rank = models.CharField(max_length=250)
-
-    Map = models.CharField(max_length=250)
-
-    ScoreAtHalf = models.CharField(max_length=250)
-
-    FinalScore = models.CharField(max_length=250)
-
-    Kills = models.IntegerField(default=0)
-
-    Deaths = models.IntegerField(default=0)
-
-    Assists = models.IntegerField(default=0)
+class Results(models.Model):
+    game = models.CharField(max_length=250, default = 'game title')
+    kills = models.IntegerField()
+    deaths = models.IntegerField()
+    time = datetime.datetime.now()
