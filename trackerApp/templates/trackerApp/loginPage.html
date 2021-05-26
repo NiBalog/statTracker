@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<form method="post" action = "{% url 'trackerApp:welcomePage' %}">
+  {% csrf_token %}
+    <div class  = "form-group">
+      <label for = "inputUsername">Username</label>
+      <input type = "text" class = "form-control" name = "inputUsername" id = "inputUsername" />
+    </div>
+    <div class  = "form-group">
+      <label for = "inputPassword">Password</label>
+      <input type = "password" class = "form-control" name = "inputPassword" id = "inputPassword" />
+    </div>
+    <button type = "submit" class = "btn btn-danger">Login</button>
+    <a href= "{% url 'trackerApp:createUser' %}">Create Account</a>
+</form>

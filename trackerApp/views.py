@@ -1,5 +1,5 @@
 
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 from django.utils import timezone
@@ -10,12 +10,19 @@ from django.contrib.auth.models import User
 
 class WelcomeView(View):
     def get(self,request):
+        template_name = "trackerApp/valoranthomeView.html"
+        return render(request, template_name)
+    def post(self, request):
         template_name = "trackerApp/welcomePage.html"
         return render(request, template_name)
 class HomePageView(View):
     def get(self,request):
-        template_name = "trackerApp/SiegeHomeView.html"
+        template_name = "trackerApp/loginPage.html"
         return render(request, template_name)
+    def post(self, request):
+        template_name = "trackerApp/loginPage.html"
+        return render(request, template_name)
+
 
 class ProfileView(View):
     def get(self,request):
@@ -35,3 +42,20 @@ class ProfileView(View):
             )
 
             addStats.save()
+
+class CreateUserView(View):
+    def get(self,request):
+        template_name = "trackerApp/createUser.html"
+        return render(request, template_name)
+
+
+def login(request):
+    if request.POST:
+        if 'inputUsername' in request.POST.keys():
+            user = authenticate(username = request.POST['inputUsername'],
+            password = request.POST['inputPassword'])
+            if user is not None:
+                login(request, user = user)
+                redirect ("https://localhost:8000/")
+        else:
+            redirect ("/")
